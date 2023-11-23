@@ -2,7 +2,7 @@ data "azurerm_client_config" "current" {}
 
 module "resource_group" {
   source                                      = "github.com/techslateramu/terraform-modules//azure/resourcegroup"
-  environment                                 = var.environment
+  environment                                 = var.env
   location                                    = var.location
   main_project                                = var.main_project
   sub_project                                 = var.sub_project
@@ -12,7 +12,7 @@ module "resource_group" {
 module "key_vault" {
   source                                      = "github.com/techslateramu/terraform-modules//azure/keyvault"
   location                                    = var.location
-  environment                                 = var.environment
+  environment                                 = var.env
   main_project                                = var.main_project
   sub_project                                 = var.sub_project
   resource_group_name                         = module.resource_group.name
@@ -24,7 +24,7 @@ module "key_vault" {
 
 module "app_service_plan" {
   source                                      = "github.com/techslateramu/terraform-modules//azure/appserviceplan"
-  environment                                 = var.environment
+  environment                                 = var.env
   main_project                                = var.main_project
   sub_project                                 = var.sub_project
   location                                    = var.location
@@ -38,7 +38,7 @@ module "windows_web_app" {
   source                                  = "github.com/techslateramu/terraform-modules//azure/windowswebapp"
   resource_group_name                     = module.resource_group.name
   location                                = var.location
-  environment                             = var.environment
+  environment                             = var.env
   service_plan_id                         = module.app_service_plan.app_service_id
   main_project                            = var.main_project
   sub_project                             = var.sub_project
@@ -53,7 +53,7 @@ module "application_insights" {
   source                                      = "github.com/techslateramu/terraform-modules//azure/appinsights"
   location                                    = var.location
   resource_group_name                         = module.resource_group.name
-  environment                                 = var.environment
+  environment                                 = var.env
   main_project                                = var.main_project
   sub_project                                 = var.sub_project
 
@@ -70,7 +70,7 @@ module "analytics_workspace" {
   source                                      = "github.com/techslateramu/terraform-modules//azure/loganalyticsworkspace"
   location                                    = var.location
   resource_group_name                         = module.resource_group.name
-  environment                                 = var.environment
+  environment                                 = var.env
   main_project                                = var.main_project
   sub_project                                 = var.sub_project
   tags                                        = var.tags

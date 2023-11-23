@@ -1,5 +1,4 @@
 variable "env" { default = "dev" } # should be coming from env folder for ex: tst.tfvars
-variable "environment" { default = "dev" } # should be coming from env folder for ex: tst.tfvars
 
 variable "tags" {
     default = {
