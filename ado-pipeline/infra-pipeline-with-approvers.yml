@@ -34,9 +34,13 @@ stages:
   - job: TerraformPlan
     steps:
     - template: pipeline-templates/terraform-plan.yaml
-  - job: TerraformApply
+
+- stage: Prod-Apply
+  variables:
+  - group: env-prod
+  jobs:
   - deployment:
-    displayName: Terraform deploy
+    displayName: Terraform Apply
     environment: Prod-Approvers
     timeoutInMinutes: 180
     strategy:
