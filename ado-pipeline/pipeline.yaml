@@ -34,7 +34,7 @@ stages:
     - template: pipeline-templates/dotnet-deployment.yaml
 
 - stage: ProdD
-  dependsOn: Dev-CD
+  dependsOn: DevCD
   pool:
     vmImage: 'windows-latest'
   variables:
