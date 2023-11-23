@@ -1,0 +1,82 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/ramu/code/techslate/github/ado-dotnet-webapp/src/dotnet-demoapp.csproj": {}
+  },
+  "projects": {
+    "/Users/ramu/code/techslate/github/ado-dotnet-webapp/src/dotnet-demoapp.csproj": {
+      "version": "1.5.0",
+      "restore": {
+        "projectUniqueName": "/Users/ramu/code/techslate/github/ado-dotnet-webapp/src/dotnet-demoapp.csproj",
+        "projectName": "dotnet-demoapp",
+        "projectPath": "/Users/ramu/code/techslate/github/ado-dotnet-webapp/src/dotnet-demoapp.csproj",
+        "packagesPath": "/Users/ramu/.nuget/packages/",
+        "outputPath": "/Users/ramu/code/techslate/github/ado-dotnet-webapp/src/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/ramu/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.ApplicationInsights.AspNetCore": {
+              "target": "Package",
+              "version": "[2.17.0, )"
+            },
+            "Microsoft.Identity.Web": {
+              "target": "Package",
+              "version": "[1.21.0, )"
+            },
+            "Microsoft.Identity.Web.MicrosoftGraph": {
+              "target": "Package",
+              "version": "[1.21.0, )"
+            },
+            "Microsoft.Identity.Web.UI": {
+              "target": "Package",
+              "version": "[1.21.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.200/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

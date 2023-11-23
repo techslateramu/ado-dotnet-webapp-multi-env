@@ -1,0 +1,61 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = DotnetDemoapp
+build_property.RootNamespace = DotnetDemoapp
+build_property.ProjectDir = /Users/ramu/code/techslate/github/ado-dotnet-webapp/src/
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/ramu/code/techslate/github/ado-dotnet-webapp/src
+build_property._RazorSourceGeneratorDebug = 
+
+[/Users/ramu/code/techslate/github/ado-dotnet-webapp/src/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ramu/code/techslate/github/ado-dotnet-webapp/src/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ramu/code/techslate/github/ado-dotnet-webapp/src/Pages/Info.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5mby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ramu/code/techslate/github/ado-dotnet-webapp/src/Pages/Monitor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTW9uaXRvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ramu/code/techslate/github/ado-dotnet-webapp/src/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ramu/code/techslate/github/ado-dotnet-webapp/src/Pages/Shared/_UserPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19Vc2VyUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ramu/code/techslate/github/ado-dotnet-webapp/src/Pages/Tools.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVG9vbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ramu/code/techslate/github/ado-dotnet-webapp/src/Pages/User.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ramu/code/techslate/github/ado-dotnet-webapp/src/Pages/Weather.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvV2VhdGhlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ramu/code/techslate/github/ado-dotnet-webapp/src/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ramu/code/techslate/github/ado-dotnet-webapp/src/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
