@@ -48,6 +48,7 @@ stages:
       runOnce:
         deploy:
           steps:
+          - checkout: self
           - template: pipeline-templates/terraform-apply.yaml
 
       
