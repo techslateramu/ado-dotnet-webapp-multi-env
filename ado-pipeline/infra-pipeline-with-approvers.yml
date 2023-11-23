@@ -36,10 +36,10 @@ stages:
     - template: pipeline-templates/terraform-plan.yaml
 
 - stage: ProdApply
+  dependsOn: ProdPlan
   variables:
   - group: env-prod
   jobs:
-  - checkout: self
   - deployment:
     displayName: Terraform Apply
     environment: Prod-Approvers
@@ -48,6 +48,4 @@ stages:
       runOnce:
         deploy:
           steps:
-          - template: pipeline-templates/terraform-apply.yaml
-
-      
+          - template: pipeline-templates/terraform-apply.yaml      
