@@ -22,7 +22,7 @@ stages:
     steps:
     - template: pipeline-templates/dotnet-ci.yaml
 
-- stage: Dev-CD
+- stage: DevCD
   dependsOn: CI
   pool:
     vmImage: 'windows-latest'
@@ -33,7 +33,7 @@ stages:
     steps:
     - template: pipeline-templates/dotnet-deployment.yaml
 
-- stage: Prod-CD
+- stage: ProdD
   dependsOn: Dev-CD
   pool:
     vmImage: 'windows-latest'
