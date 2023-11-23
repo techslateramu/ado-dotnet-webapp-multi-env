@@ -27,7 +27,7 @@ stages:
     steps:
     - template: pipeline-templates/terraform-apply.yaml
 
-- stage: Prod-Plan
+- stage: ProdPlan
   variables:
   - group: env-prod
   jobs:
@@ -35,7 +35,7 @@ stages:
     steps:
     - template: pipeline-templates/terraform-plan.yaml
 
-- stage: Prod-Apply
+- stage: ProdApply
   variables:
   - group: env-prod
   jobs:
