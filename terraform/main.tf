@@ -75,14 +75,3 @@ module "analytics_workspace" {
   sub_project                                 = var.sub_project
   tags                                        = var.tags
 }
-
-
-module "key_vault_secret" {
-  source                      = "github.com/techslateramu/terraform-modules//azure/keyvaultsecret"
-  key_vault_id                = module.key_vault.key_vault_id
-  secret_names                = {
-                                  "ApplicationInsightsInstrumentationKey"   = module.application_insights.instrumentation_key
-                                  "ApplicationInsightsConnectionString"     = module.application_insights.app_insights_connection_string
-                                }
-}
-

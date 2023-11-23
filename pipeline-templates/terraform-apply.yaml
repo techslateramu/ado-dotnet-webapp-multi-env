@@ -7,17 +7,6 @@ steps:
     ARM_CLIENT_ID: $(ARM_CLIENT_ID)
     ARM_CLIENT_SECRET: $(ARM_CLIENT_SECRET)
 
-- script: 'terraform -chdir=terraform/ validate'
-  displayName: 'Terraform Validate'
-
-- script: 'terraform -chdir=terraform/ plan -input=false -out=tfplan -var-file=./env/$(env).tfvars -var="ARM_CLIENT_ID=$(ARM_CLIENT_ID)" -var="ARM_CLIENT_SECRET=$(ARM_CLIENT_SECRET)" -var="ARM_TENANT_ID=$(ARM_TENANT_ID)" -var="ARM_SUBSCRIPTION_ID=$(ARM_SUBSCRIPTION_ID)"'
-  displayName: 'Terraform Plan'
-  env:
-    ARM_SUBSCRIPTION_ID: $(ARM_SUBSCRIPTION_ID)
-    ARM_TENANT_ID: $(ARM_TENANT_ID)
-    ARM_CLIENT_ID: $(ARM_CLIENT_ID)
-    ARM_CLIENT_SECRET: $(ARM_CLIENT_SECRET)
-
 - script: 'terraform -chdir=terraform/ apply -input=false -auto-approve -var-file=./env/$(env).tfvars -var="ARM_CLIENT_ID=$(ARM_CLIENT_ID)" -var="ARM_CLIENT_SECRET=$(ARM_CLIENT_SECRET)" -var="ARM_TENANT_ID=$(ARM_TENANT_ID)"  -var="ARM_SUBSCRIPTION_ID=$(ARM_SUBSCRIPTION_ID)"'
   displayName: 'Terraform Apply'
   env:
