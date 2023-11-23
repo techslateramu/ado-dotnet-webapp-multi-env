@@ -21,11 +21,11 @@ stages:
   jobs:
   - job: TerraformPlan
     steps:
-    - template: pipeline-templates/terraform-plan.yaml
+    - template: ./pipeline-templates/terraform-plan.yaml
   - job: TerraformApply
     dependsOn: TerraformPlan
     steps:
-    - template: pipeline-templates/terraform-apply.yaml
+    - template: ./pipeline-templates/terraform-apply.yaml
 
 - stage: Prod
   variables:

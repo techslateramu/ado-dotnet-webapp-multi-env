@@ -1,0 +1,17 @@
+steps:
+  - task: DownloadPipelineArtifact@2
+    displayName: 'Download artifact'
+    inputs:
+      artifactName: 'publish'
+      downloadPath: '$(System.ArtifactsDirectory)/publish'
+
+  - task: AzureRmWebAppDeployment@4
+    displayName: 'Deploy to Azure Web App'
+    inputs:
+      ConnectionType: 'AzureRM'
+      azureSubscription: '$(az_sc_name)'
+      appType: 'webApp'
+      WebAppName: '$(webapp1)'
+      packageForLinux: '$(System.ArtifactsDirectory)/publish/**/*.zip'
+      enableCustomDeployment: true
+      DeploymentType: 'webDeploy'
