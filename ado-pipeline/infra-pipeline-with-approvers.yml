@@ -1,0 +1,47 @@
+name: $(Build.DefinitionName)-$(Date:yyyyMMdd)$(Rev:.r)
+
+trigger:
+  branches:
+    include:
+      - main
+  paths:
+    include:
+      - 'terraform/*'    
+      
+pool:
+   vmImage: 'ubuntu-latest'
+  
+variables:
+  - group: common
+
+stages:
+- stage: Dev
+  variables:
+  - group: env-dev
+  jobs:
+  - job: TerraformPlan
+    steps:
+    - template: pipeline-templates/terraform-plan.yaml
+  - job: TerraformApply
+    dependsOn: TerraformPlan
+    steps:
+    - template: pipeline-templates/terraform-apply.yaml
+
+- stage: Prod-Plan
+  variables:
+  - group: env-prod
+  jobs:
+  - job: TerraformPlan
+    steps:
+    - template: pipeline-templates/terraform-plan.yaml
+  - job: TerraformApply
+  - deployment:
+    displayName: Terraform deploy
+    environment: Prod-Approvers
+    timeoutInMinutes: 180
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - template: pipeline-templates/terraform-apply.yaml
+      
